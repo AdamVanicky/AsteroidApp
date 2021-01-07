@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AsteroidApp.View.AsteroidInfoPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Name of object" TextColor="Black"/>
+            <Label Text="{Binding Name}" TextColor="Red"/>
+            <Label Text="Object ID" TextColor="Black"/>
+            <Label Text="{Binding ID}" TextColor="Red"/>
+            <Label Text="Is object hazardous" TextColor="Black"/>
+            <Label Text="{Binding IsHazardous}" TextColor="Red"/>
+            <Label Text="Object is orbiting this body" TextColor="Black"/>
+            <Label Text="{Binding OrbitingBody}" TextColor="Red"/>
+            <Label Text="Is sentry object" TextColor="Black"/>
+            <Label Text="{Binding IsSentryObject}" TextColor="Red"/>
+
+            <Button Text="Uložit" Clicked="Button_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
