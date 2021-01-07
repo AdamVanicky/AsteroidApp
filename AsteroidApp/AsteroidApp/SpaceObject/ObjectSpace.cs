@@ -11,12 +11,11 @@ namespace AsteroidApp.SpaceObject
         public ObjectSpace(string json)
         {
             JObject jObject = JObject.Parse(json);
-            JToken jSpaceObject = jObject["space_object"];
-            ID = (int)jSpaceObject["id"];
-            Name = (string)jSpaceObject["name"];
-            IsHazardous = (bool)jSpaceObject["is_potentially_hazardous_asteroid"];
-            OrbitingBody = (string)jSpaceObject["orbiting_body"];
-            IsSentryObject = (bool)jSpaceObject["is_sentry_object"];
+            ID = (int)jObject["id"];
+            Name = (string)jObject["name"];
+            IsHazardous = (bool)jObject["is_potentially_hazardous_asteroid"];
+            OrbitingBody = (string)jObject["orbiting_body"];
+            IsSentryObject = (bool)jObject["is_sentry_object"];
         }
 
         public ObjectSpace()

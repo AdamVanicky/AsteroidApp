@@ -29,7 +29,7 @@ namespace AsteroidApp.HTTP_request
             var json = JsonConvert.SerializeObject(responseBody);
             int IDposition = json.IndexOf("id");
             string ID = json.Substring(IDposition-1,1051);
-            string IDPerfect = @"{""space_object"":{" + ID;
+            string IDPerfect = "{" + ID;
 
             ObjectSpace osp = new ObjectSpace(IDPerfect);
             
