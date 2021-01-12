@@ -12,17 +12,13 @@ namespace AsteroidApp
 {
     public partial class App : Application
     {
-        public static ObjectSpace osp = new ObjectSpace();
+        public static Root osp = new Root();
         public App()
         {
             InitializeComponent();
-            GiveObject();
-            MainPage = new NavigationPage(new AllAsteroidsPage(osp)); 
+            MainPage = new NavigationPage(new AsteroidDisplayPage()); 
         }
-        static async void GiveObject()
-        {
-            osp = await HTTPrequest.Request();
-        }
+
 
         protected override void OnStart()
         {

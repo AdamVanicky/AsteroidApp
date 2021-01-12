@@ -4,18 +4,27 @@
              x:Class="AsteroidApp.View.AsteroidInfoPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Name of object" TextColor="Black"/>
-            <Label Text="{Binding Name}" TextColor="Red"/>
-            <Label Text="Object ID" TextColor="Black"/>
-            <Label Text="{Binding ID}" TextColor="Red"/>
-            <Label Text="Is object hazardous" TextColor="Black"/>
-            <Label Text="{Binding IsHazardous}" TextColor="Red"/>
-            <Label Text="Object is orbiting this body" TextColor="Black"/>
-            <Label Text="{Binding OrbitingBody}" TextColor="Red"/>
-            <Label Text="Is sentry object" TextColor="Black"/>
-            <Label Text="{Binding IsSentryObject}" TextColor="Red"/>
+            <Label Text="Asteroid Information" FontSize="30"></Label>
+            <Frame HasShadow="True" Padding="15" Margin="15">
+                <StackLayout>
 
-            <Button Text="Uložit" Clicked="Button_Clicked"/>
+                    <Label Text="Name of object" TextColor="Black"/>
+                    <Label x:Name="Name" Text="{Binding Name}" TextColor="Red"/>
+                    
+                    <Label Text="Object ID" TextColor="Black"/>
+                    <Label x:Name="ID" Text="{Binding ID}" TextColor="Red"/>
+                    
+                    <Label Text="Is object hazardous" TextColor="Black"/>
+                    <Label x:Name="Is_Hazardous" Text="{Binding Is_Hazardous}" TextColor="Red"/>
+                    
+                    <Label Text="Object is orbiting this body" TextColor="Black"/>
+                    <Label x:Name="Orbiting_Body" Text="{Binding Orbiting_Body}" TextColor="Red"/>
+                    
+                    <Label Text="Speed" TextColor="Black"/>
+                    <Label x:Name="Velocity_kms" Text="{Binding Velocity_kms}" TextColor="Red"/>
+
+                </StackLayout>
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

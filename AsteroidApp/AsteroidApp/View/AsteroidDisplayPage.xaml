@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AsteroidApp.View.AsteroidDisplayPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="Nadpis" Text="Asteroids near Earth" FontSize="34" BackgroundColor="Red" TextColor="Black"/>
+            <ListView x:Name="asterList" ItemsSource="{Binding Asteroids}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell x:Name="vcell">
+                            <ViewCell.View>
+                                <Frame CornerRadius="4" HasShadow="True" Padding="20" Margin="20">
+                                    <StackLayout Spacing="5"  BackgroundColor="Black" >
+                                        <Label x:Name="label" Text="{Binding Name}" FontSize="20" FontAttributes="Italic"></Label>
+                                        <Label x:Name="label2" Text="{Binding ID}" FontSize="14" TextColor="ForestGreen"></Label>
+                                        <Button Text="SHOW DETAILS" Clicked="Button_Clicked" BindingContext="{Binding .}" Margin="0,10,0,-5"/>
+                                    </StackLayout>
+                                </Frame>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
