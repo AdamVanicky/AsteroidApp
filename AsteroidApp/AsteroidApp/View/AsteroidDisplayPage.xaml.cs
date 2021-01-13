@@ -32,6 +32,10 @@ namespace AsteroidApp.View
 
         private void RefreshButton_Clicked(object sender, EventArgs e)
         {
+            HTTPrequest req = new HTTPrequest();
+
+            asteroidList.ItemsSource = req.GiveAsteroids();
+
             Refresh.Text = DateTime.Now.ToString();
         }
     }
