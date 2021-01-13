@@ -6,7 +6,6 @@ namespace AsteroidApp.SpaceObject
 {
     public class Asteroid
     {
-
         public string Name { get; set; }
         public string ID { get; set; }
         public string Is_Hazardous { get; set; }

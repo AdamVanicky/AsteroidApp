@@ -8,7 +8,7 @@ namespace AsteroidApp.SpaceObject
 {
     public class ObjectSpace
     {
-        public IList<NearEarthObject> nearEarthobjects { get; set; }
+        public IList<NearEarthObject> near_earth_objects { get; set; }
     }
 
     public class Links

@@ -6,7 +6,7 @@
         <StackLayout>
             <Label Text="Asteroid Information" FontSize="30"></Label>
             <Frame HasShadow="True" Padding="15" Margin="15">
-                <StackLayout>
+                <StackLayout Spacing="10">
 
                     <Label Text="Name of object" TextColor="Black"/>
                     <Label x:Name="Name" Text="{Binding Name}" TextColor="Red"/>

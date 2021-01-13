@@ -12,7 +12,6 @@ namespace AsteroidApp
 {
     public partial class App : Application
     {
-        public static Root osp = new Root();
         public App()
         {
             InitializeComponent();

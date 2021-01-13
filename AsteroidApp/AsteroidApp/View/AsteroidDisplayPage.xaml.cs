@@ -19,12 +19,15 @@ namespace AsteroidApp.View
             InitializeComponent();
             HTTPrequest req = new HTTPrequest();
 
-            asterList.ItemsSource = req.GiveAsteroids();
+            asteroidList.ItemsSource = req.GiveAsteroids();
+
+            Refresh.Text = DateTime.Now.ToString();
         }
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            Application.Current.MainPage.Navigation.PushAsync(new AsteroidInfoPage(((sender as Button).BindingContext) as Asteroid));
+            
+            Application.Current.MainPage.Navigation.PushAsync(new AsteroidInfoPage((sender as Button).BindingContext as Asteroid));
         }
     }
 }

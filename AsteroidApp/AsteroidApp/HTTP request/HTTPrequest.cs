@@ -17,9 +17,9 @@ namespace AsteroidApp.HTTP_request
 {
     public class HTTPrequest
     {
-        const string url = "https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=hOiwbtAiz8jSqDxppkeARVfim1O48lbatB7VY1By";
+        const string url = "https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=kTlB1068LXF3IZeIHqWRPhMeFSNgvZVKyPOCRoRd";
 
-        private HttpClient client = new HttpClient();
+        protected HttpClient client = new HttpClient();
 
         public async Task<ObjectSpace> Request()
         {
@@ -29,20 +29,15 @@ namespace AsteroidApp.HTTP_request
         public List<Asteroid> GiveAsteroids()
         {
             List<Asteroid> asteroids = new List<Asteroid>();
-            try 
-            {
+
                 ObjectSpace response = Request().Result;
-                foreach(NearEarthObject nEo in response.nearEarthobjects)
+                foreach(NearEarthObject nEo in response.near_earth_objects)
                 {
-                    CloseApproachData cad = new CloseApproachData();
+                    CloseApproachData cad = nEo.close_approach_data[0];
                     asteroids.Add(new Asteroid(nEo.name, nEo.id, nEo.is_potentially_hazardous_asteroid.ToString(), cad.relative_velocity.kilometers_per_second, cad.orbiting_body));
                 }
                 return asteroids;
-            }
-            catch
-            {
-                throw new Exception("Fail encountered");
-            }
+            
         }
     }
 }
