@@ -29,5 +29,10 @@ namespace AsteroidApp.View
             
             Application.Current.MainPage.Navigation.PushAsync(new AsteroidInfoPage((sender as Button).BindingContext as Asteroid));
         }
+
+        private void RefreshButton_Clicked(object sender, EventArgs e)
+        {
+            Refresh.Text = DateTime.Now.ToString();
+        }
     }
 }
