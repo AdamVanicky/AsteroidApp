@@ -4,7 +4,7 @@
              x:Class="AsteroidApp.View.AsteroidInfoPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Asteroid Information" FontSize="30"></Label>
+            <Label Text="Asteroid Information" FontSize="30" HorizontalTextAlignment="Center"></Label>
             <Frame HasShadow="True" Padding="15" Margin="15">
                 <StackLayout Spacing="10">
 

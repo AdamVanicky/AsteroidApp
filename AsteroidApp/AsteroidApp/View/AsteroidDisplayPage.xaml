@@ -11,7 +11,7 @@
                     <DataTemplate>
                         <ViewCell x:Name="vc">
                             <ViewCell.View>
-                                <Frame CornerRadius="4" HasShadow="True" Padding="20" Margin="20">
+                                <Frame CornerRadius="4" HasShadow="True" Padding="20" Margin="20" BackgroundColor="Black">
                                     <StackLayout Spacing="5"  BackgroundColor="Black" >
                                         <Label x:Name="label" Text="{Binding Name}" FontSize="20" TextColor="White" FontAttributes="Bold"></Label>
                                         <Label x:Name="label2" Text="{Binding ID}" FontSize="14" TextColor="ForestGreen"></Label>
